@@ -135,6 +135,7 @@ function addSuggestions(sugerencias) {
 document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', function () {
@@ -143,12 +144,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Cerrar menú al hacer clic en un enlace
+    // Manejar clics en dropdowns para móvil
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1024) {
+                // Prevenir navegación si es un dropdown en móvil
+                const menu = this.querySelector('.dropdown-menu');
+                if (menu) {
+                    e.preventDefault();
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                }
+            }
+        });
+    });
+
+    // Cerrar menú al hacer clic en un enlace (que no sea un dropdown)
     if (navLinks) {
-        navLinks.querySelectorAll('a').forEach(link => {
+        navLinks.querySelectorAll('a:not(#dropdown-toggle)').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
+                if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
             });
         });
     }
@@ -195,114 +210,9 @@ function observeElements() {
 
     // Observar elementos
     document.querySelectorAll('.service-card, .feature, .stat, .form-group').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
         observer.observe(el);
     });
 }
-
-// =============================================
-// CSS ADICIONAL VIA JS
-// =============================================
-
-const additionalStyles = document.createElement('style');
-additionalStyles.textContent = `
-    /* Navegación móvil */
-    @media (max-width: 768px) {
-        .nav-links {
-            position: fixed;
-            top: 70px;
-            left: 0;
-            right: 0;
-            background: white;
-            flex-direction: column;
-            padding: 1rem;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
-            transform: translateY(-110%);
-            transition: transform 0.3s ease;
-            z-index: 99;
-        }
-        
-        .nav-links.active {
-            transform: translateY(0);
-        }
-        
-        .mobile-menu-btn.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        
-        .mobile-menu-btn.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-btn.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-        
-        .dropdown-menu {
-            position: static;
-            transform: none;
-            box-shadow: none;
-            opacity: 1;
-            visibility: visible;
-            padding: 0.5rem 0 0 1rem;
-            border: none;
-        }
-    }
-    
-    /* Indicador de escritura del chat */
-    .typing span {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        margin: 0 2px;
-        background: #FF6B6B;
-        border-radius: 50%;
-        animation: typingBounce 1.4s infinite ease-in-out both;
-    }
-    
-    .typing span:nth-child(1) { animation-delay: -0.32s; }
-    .typing span:nth-child(2) { animation-delay: -0.16s; }
-    
-    @keyframes typingBounce {
-        0%, 80%, 100% { transform: scale(0); }
-        40% { transform: scale(1); }
-    }
-    
-    /* Sugerencias del chat */
-    .chat-suggestions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
-    }
-    
-    .suggestion-btn {
-        padding: 0.5rem 1rem;
-        background: linear-gradient(135deg, #FFE4E1, #FFF0F5);
-        border: 2px solid #FF6B6B;
-        border-radius: 999px;
-        font-size: 0.85rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        color: #FF6B6B;
-        font-weight: 500;
-    }
-    
-    .suggestion-btn:hover {
-        background: linear-gradient(135deg, #FF6B6B, #FF69B4);
-        color: white;
-        transform: scale(1.05);
-    }
-    
-    /* Animación de entrada */
-    .animate-in {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-`;
-document.head.appendChild(additionalStyles);
 
 // =============================================
 // UTILIDADES
