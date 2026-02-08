@@ -51,7 +51,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title=settings.app_name,
     description="""
-    ## 🏠 SegurosPy - Sistema de Gestión para Corredurías de Seguros
+    ## 🏠 SegurosPy - Sistema de Gestión para Agentes de Seguros
     
     API completa para:
     - 📝 Gestión de leads desde formularios web

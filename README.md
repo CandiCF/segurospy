@@ -1,6 +1,6 @@
 # 🐍 SegurosPy
 
-**Sistema de Gestión Web para Corredurías de Seguros desarrollado en Python**
+**Sistema de Gestión Web para Agentes de Seguros desarrollado en Python**
 
 Este proyecto es la versión Python del sistema de SegurosPy, demostrando cómo implementar las mismas funcionalidades usando un stack de Python moderno.
 

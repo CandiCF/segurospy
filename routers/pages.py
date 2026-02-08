@@ -27,8 +27,8 @@ async def home(request: Request):
         "pages/index.html",
         {
             "request": request,
-            "titulo": f"SegurosPy - Tu Correduría de Seguros en la {ZONA} 💜",
-            "meta_description": f"Correduría de seguros en {LOCALIDADES}. Comparamos más de 20 aseguradoras para ofrecerte el mejor precio. ¡Ahorra hasta un 40%!"
+            "titulo": f"SegurosPy - Tu Agente de Seguros en la {ZONA} 💜",
+            "meta_description": f"Agente de seguros en {LOCALIDADES}. Comparamos más de 20 aseguradoras para ofrecerte el mejor precio. ¡Ahorra hasta un 40%!"
         }
     )
 
