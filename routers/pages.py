@@ -100,13 +100,13 @@ async def seguro_salud(request: Request):
 
 @router.get("/seguro-mujer", response_class=HTMLResponse)
 async def seguro_mujer(request: Request):
-    """Página de seguro de la mujer - Producto estrella"""
+    """Página de seguro exclusivo para mujeres - Producto estrella"""
     return templates.TemplateResponse(
         "pages/seguro-mujer.html",
         {
             "request": request,
-            "titulo": f"Seguro de la Mujer en {ZONA} | SegurosPy",
-            "meta_description": f"Seguro exclusivo para mujeres con coberturas ginecológicas, maternidad y más. Villalba, Galapagar, Alpedrete y toda la Sierra."
+            "titulo": f"Seguro Exclusivo para Ti que Eres Mujer | {ZONA} | SegurosPy",
+            "meta_description": f"Seguro exclusivo para mujeres con asistencia oncológica, vida diaria, gestión de sucesiones y bonus por no siniestralidad. Villalba, Galapagar y Sierra de Madrid."
         }
     )
 
