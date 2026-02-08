@@ -36,11 +36,21 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "SegurosPy",
+        "@type": "InsuranceAgency",
+        "name": "SegurosPy - Correduría de Seguros Sierra de Madrid",
         "description": "{{ meta_description }}",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web"
+        "url": "https://segurospy.es",
+        "telephone": "+34647801213",
+        "email": "norte.oficina.villalba@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Collado Villalba",
+            "postalCode": "28400",
+            "addressRegion": "Madrid",
+            "addressCountry": "ES"
+        },
+        "areaServed": ["Collado Villalba", "Galapagar", "Alpedrete", "Torrelodones", "Guadarrama", "Los Molinos", "Cercedilla"],
+        "priceRange": "€€"
     }
     </script>
 
@@ -53,7 +63,7 @@
         <div class="container">
             <nav class="nav">
                 <a href="/" class="logo">
-                    <span class="logo-icon">🐍</span>
+                    <span class="logo-icon">🛡️</span>
                     <span class="logo-text">SegurosPy</span>
                 </a>
 
@@ -71,11 +81,11 @@
                     </li>
                     <li><a href="/comparador">Comparador</a></li>
                     <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/#contacto">Contacto</a></li>
                 </ul>
 
-                <a href="tel:+34661854126" class="btn btn-primary">
-                    📞 661 854 126
+                <a href="tel:+34647801213" class="btn btn-primary">
+                    📞 647 801 213
                 </a>
 
                 <button class="mobile-menu-btn" aria-label="Menú">
@@ -97,27 +107,30 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>🐍 SegurosPy</h4>
-                    <p>Sistema de gestión web para corredurías de seguros. Desarrollado con Python y FastAPI.</p>
+                    <h4>🛡️ SegurosPy</h4>
+                    <p>Tu correduría de seguros en la Sierra de Madrid. Especialistas en Villalba, Galapagar, Alpedrete,
+                        Torrelodones y toda la zona noroeste. Comparamos más de 20 aseguradoras para encontrarte el
+                        mejor precio.</p>
                 </div>
 
                 <div class="footer-col">
                     <h4>Seguros</h4>
                     <ul>
-                        <li><a href="/seguro-hogar">Seguro de Hogar</a></li>
-                        <li><a href="/seguro-coche">Seguro de Coche</a></li>
-                        <li><a href="/seguro-vida">Seguro de Vida</a></li>
-                        <li><a href="/seguro-decesos">Seguro de Decesos</a></li>
-                        <li><a href="/seguro-salud">Seguro de Salud</a></li>
+                        <li><a href="/seguro-hogar">🏠 Seguro de Hogar</a></li>
+                        <li><a href="/seguro-coche">🚗 Seguro de Coche</a></li>
+                        <li><a href="/seguro-vida">💚 Seguro de Vida</a></li>
+                        <li><a href="/seguro-decesos">🕊️ Seguro de Decesos</a></li>
+                        <li><a href="/seguro-salud">🏥 Seguro de Salud</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <ul>
-                        <li>📧 info@segurospy.com</li>
-                        <li>🐙 github.com/segurospy</li>
-                        <li>🐍 Python + FastAPI</li>
+                        <li>📞 647 801 213</li>
+                        <li>📧 norte.oficina.villalba@gmail.com</li>
+                        <li>📍 Collado Villalba, Madrid</li>
+                        <li>🕐 L-V: 10:00 - 19:00</li>
                     </ul>
                 </div>
 
@@ -132,18 +145,17 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; {{ now.year if now else "2026" }} SegurosPy. Open Source Project.</p>
+                <p>&copy; {{ now.year if now else "2026" }} SegurosPy - Sierra de Madrid. Todos los derechos reservados.
+                </p>
                 <p class="footer-tech">
-                    Desarrollado con <span style="color: #e74c3c;">❤️</span> y
-                    <span style="color: #3776ab;">Python</span> +
-                    <span style="color: #009688;">FastAPI</span>
+                    Desarrollado con <span style="color: #FF6B6B;">❤️</span> en la Sierra
                 </p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/34661854126" class="whatsapp-btn" target="_blank" rel="noopener"
+    <a href="https://wa.me/34647801213" class="whatsapp-btn" target="_blank" rel="noopener"
         aria-label="Contactar por WhatsApp">
         <svg viewBox="0 0 32 32" width="32" height="32">
             <path fill="#fff"
@@ -165,7 +177,8 @@
             </div>
             <div class="chat-messages" id="chat-messages">
                 <div class="message bot">
-                    ¡Hola! 👋 Soy el asistente virtual de SegurosPy. ¿En qué puedo ayudarte?
+                    ¡Hola! 👋 Soy el asistente virtual de SegurosPy. ¿En qué puedo ayudarte? Puedo informarte sobre
+                    seguros en la Sierra de Madrid.
                 </div>
             </div>
             <div class="chat-input">

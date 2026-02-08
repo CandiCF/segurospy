@@ -1,5 +1,6 @@
 """
 Router de Páginas - Renderiza las vistas HTML con Jinja2
+Enfocado en Sierra de Madrid Noroeste
 """
 from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
@@ -9,6 +10,10 @@ router = APIRouter(tags=["Páginas"])
 
 # Configurar templates
 templates = Jinja2Templates(directory="templates")
+
+# Zona de servicio
+ZONA = "Sierra de Madrid"
+LOCALIDADES = "Villalba, Galapagar, Alpedrete, Torrelodones, Guadarrama, Los Molinos y Cercedilla"
 
 
 # =============================================
@@ -22,8 +27,8 @@ async def home(request: Request):
         "pages/index.html",
         {
             "request": request,
-            "titulo": "SegurosPy - Tu Agente de Seguros en Madrid",
-            "meta_description": "Correduría de seguros en Madrid. Comparamos más de 20 aseguradoras para ofrecerte el mejor precio en seguros de hogar, auto, vida y más."
+            "titulo": f"SegurosPy - Tu Correduría de Seguros en la {ZONA} 💜",
+            "meta_description": f"Correduría de seguros en {LOCALIDADES}. Comparamos más de 20 aseguradoras para ofrecerte el mejor precio. ¡Ahorra hasta un 40%!"
         }
     )
 
@@ -35,8 +40,8 @@ async def seguro_hogar(request: Request):
         "pages/seguro-hogar.html",
         {
             "request": request,
-            "titulo": "Seguro de Hogar en Madrid | SegurosPy",
-            "meta_description": "Protege tu hogar con las mejores coberturas. Comparamos todas las aseguradoras para encontrarte el mejor precio."
+            "titulo": f"Seguro de Hogar en {ZONA} | SegurosPy",
+            "meta_description": f"Protege tu hogar en {LOCALIDADES}. Comparamos todas las aseguradoras para encontrarte el mejor precio."
         }
     )
 
@@ -48,8 +53,8 @@ async def seguro_coche(request: Request):
         "pages/seguro-coche.html",
         {
             "request": request,
-            "titulo": "Seguro de Coche en Madrid | SegurosPy",
-            "meta_description": "Ahorra hasta un 40% en tu seguro de coche. Terceros, todo riesgo y franquicia. Comparamos más de 20 aseguradoras."
+            "titulo": f"Seguro de Coche en {ZONA} | SegurosPy",
+            "meta_description": f"Ahorra hasta un 40% en tu seguro de coche en {LOCALIDADES}. Terceros, todo riesgo y franquicia."
         }
     )
 
@@ -61,8 +66,8 @@ async def seguro_vida(request: Request):
         "pages/seguro-vida.html",
         {
             "request": request,
-            "titulo": "Seguro de Vida en Madrid | SegurosPy",
-            "meta_description": "Protege el futuro de tu familia con un seguro de vida. Desde 10€/mes. Asesoramiento gratuito."
+            "titulo": f"Seguro de Vida en {ZONA} | SegurosPy",
+            "meta_description": f"Protege el futuro de tu familia con un seguro de vida. Asesoramiento gratuito en {LOCALIDADES}."
         }
     )
 
@@ -74,8 +79,8 @@ async def seguro_decesos(request: Request):
         "pages/seguro-decesos.html",
         {
             "request": request,
-            "titulo": "Seguro de Decesos en Madrid | SegurosPy",
-            "meta_description": "Tranquilidad para ti y tu familia. Seguro de decesos con todas las gestiones incluidas. Consulta sin compromiso."
+            "titulo": f"Seguro de Decesos en {ZONA} | SegurosPy",
+            "meta_description": f"Tranquilidad para ti y tu familia en {LOCALIDADES}. Seguro de decesos con todas las gestiones incluidas."
         }
     )
 
@@ -87,8 +92,8 @@ async def seguro_salud(request: Request):
         "pages/seguro-salud.html",
         {
             "request": request,
-            "titulo": "Seguro de Salud en Madrid | SegurosPy",
-            "meta_description": "Accede a los mejores especialistas sin esperas. Seguros de salud adaptados a tus necesidades."
+            "titulo": f"Seguro de Salud en {ZONA} | SegurosPy",
+            "meta_description": f"Accede a los mejores especialistas sin esperas. Seguros de salud en {LOCALIDADES}."
         }
     )
 
@@ -100,8 +105,8 @@ async def comparador(request: Request):
         "pages/comparador.html",
         {
             "request": request,
-            "titulo": "Comparador de Seguros en Madrid | SegurosPy",
-            "meta_description": "Compara seguros de auto, hogar, vida y más. Más de 20 aseguradoras. Cotización en 2 minutos."
+            "titulo": f"Comparador de Seguros en {ZONA} | SegurosPy",
+            "meta_description": f"Compara seguros en {LOCALIDADES}. Más de 20 aseguradoras. Cotización en 2 minutos."
         }
     )
 
@@ -127,7 +132,7 @@ async def contacto(request: Request):
         {
             "request": request,
             "titulo": "Contacto | SegurosPy",
-            "meta_description": "Contacta con SegurosPy. Teléfono: 661 854 126. Email: info@segurospy.com"
+            "meta_description": f"Contacta con SegurosPy. Teléfono: 647 801 213. Email: norte.oficina.villalba@gmail.com. {LOCALIDADES}"
         }
     )
 
