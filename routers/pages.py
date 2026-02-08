@@ -161,3 +161,85 @@ async def privacidad(request: Request):
             "meta_description": "Política de privacidad y protección de datos de SegurosPy."
         }
     )
+
+
+# =============================================
+# ARTÍCULOS DEL BLOG - SEO
+# =============================================
+
+@router.get("/blog/seguro-hogar-villalba-guia-completa", response_class=HTMLResponse)
+async def blog_seguro_hogar_villalba(request: Request):
+    """Artículo SEO: Seguro de hogar en Collado Villalba"""
+    return templates.TemplateResponse(
+        "pages/blog/seguro-hogar-villalba-guia-completa.html",
+        {
+            "request": request,
+            "titulo": "Seguro de Hogar en Collado Villalba: Guía Completa 2024 | SegurosPy",
+            "meta_description": "Todo sobre seguro de hogar en Collado Villalba, Galapagar, Alpedrete y Sierra de Madrid. Coberturas, precios y cómo ahorrar hasta 40%."
+        }
+    )
+
+
+@router.get("/blog/seguro-coche-galapagar-mejores-ofertas", response_class=HTMLResponse)
+async def blog_seguro_coche_galapagar(request: Request):
+    """Artículo SEO: Seguro de coche en Galapagar"""
+    return templates.TemplateResponse(
+        "pages/blog/seguro-coche-galapagar-mejores-ofertas.html",
+        {
+            "request": request,
+            "titulo": "Seguro de Coche en Galapagar: Mejores Ofertas 2024 | SegurosPy",
+            "meta_description": "Compara seguros de coche en Galapagar, Villalba y Sierra de Madrid. Terceros desde 180€/año. Todo riesgo con franquicia al mejor precio."
+        }
+    )
+
+
+@router.get("/blog/seguro-decesos-sierra-madrid-todo-incluido", response_class=HTMLResponse)
+async def blog_seguro_decesos(request: Request):
+    """Artículo SEO: Seguro de decesos en la Sierra de Madrid"""
+    return templates.TemplateResponse(
+        "pages/blog/seguro-decesos-sierra-madrid-todo-incluido.html",
+        {
+            "request": request,
+            "titulo": "Seguro de Decesos en Sierra de Madrid: ¿Qué Incluye? | SegurosPy",
+            "meta_description": "Descubre qué cubre el seguro de decesos. Servicio 24h, traslados, gestiones incluidas. Desde 5€/mes en Villalba, Galapagar y toda la Sierra."
+        }
+    )
+
+
+@router.get("/blog/seguro-mujer-coberturas-exclusivas", response_class=HTMLResponse)
+async def blog_seguro_mujer(request: Request):
+    """Artículo SEO: Seguro exclusivo para mujeres"""
+    return templates.TemplateResponse(
+        "pages/blog/seguro-mujer-coberturas-exclusivas.html",
+        {
+            "request": request,
+            "titulo": "Seguro Exclusivo para Mujeres: 6 Coberturas que No Conocías | SegurosPy",
+            "meta_description": "Seguro exclusivo para mujeres con asistencia oncológica, vida diaria, gestión de sucesiones y más. Pensado para ti, trabajes o no."
+        }
+    )
+
+
+@router.get("/blog/como-ahorrar-seguro-hogar-alpedrete", response_class=HTMLResponse)
+async def blog_ahorrar_seguro(request: Request):
+    """Artículo SEO: Cómo ahorrar en seguro de hogar"""
+    return templates.TemplateResponse(
+        "pages/blog/como-ahorrar-seguro-hogar-alpedrete.html",
+        {
+            "request": request,
+            "titulo": "Cómo Ahorrar en tu Seguro de Hogar en Alpedrete y Torrelodones | SegurosPy",
+            "meta_description": "7 trucos para reducir la prima de tu seguro de hogar sin perder coberturas. Ahorra hasta 200€ al año en la Sierra de Madrid."
+        }
+    )
+
+
+@router.get("/blog/seguro-mascotas-sierra-guadarrama", response_class=HTMLResponse)
+async def blog_seguro_mascotas(request: Request):
+    """Artículo SEO: Seguro de mascotas en la Sierra"""
+    return templates.TemplateResponse(
+        "pages/blog/seguro-mascotas-sierra-guadarrama.html",
+        {
+            "request": request,
+            "titulo": "Seguro de Mascotas en Sierra de Guadarrama: Guía 2024 | SegurosPy",
+            "meta_description": "Protege a tu perro o gato. Seguro de mascotas con cobertura veterinaria, responsabilidad civil y asistencia en viaje. Sierra de Madrid."
+        }
+    )
