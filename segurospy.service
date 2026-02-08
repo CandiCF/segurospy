@@ -1,0 +1,15 @@
+[Unit]
+Description=SegurosPy - Agente de Seguros Sierra de Madrid
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/segurospy
+Environment="PATH=/var/www/segurospy/venv/bin"
+ExecStart=/var/www/segurospy/venv/bin/gunicorn main:app -w 2 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8000
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
