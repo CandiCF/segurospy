@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Hero Section Vibrante -->
+<!-- Hero con Imagen -->
 <section class="hero">
     <div class="container">
         <div class="hero-content">
@@ -41,54 +41,116 @@
         </div>
 
         <div class="hero-image">
-            <div class="hero-visual">
-                🛡️
-            </div>
+            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&h=600&fit=crop"
+                alt="Familia feliz protegida" class="hero-img">
         </div>
     </div>
 </section>
 
-<!-- Servicios con tarjetas coloridas -->
+<!-- PRODUCTOS ESTRELLA -->
+<section class="featured-products">
+    <div class="container">
+        <h2 class="section-title">Nuestros Seguros Estrella ⭐</h2>
+        <p class="section-subtitle">Productos exclusivos diseñados pensando en ti</p>
+
+        <div class="featured-grid">
+            <!-- Seguro de la Mujer -->
+            <a href="/seguro-mujer" class="featured-card">
+                <img src="https://images.unsplash.com/photo-1571844307880-751c6d86f3f3?w=500&h=300&fit=crop"
+                    alt="Mujer sonriendo" class="featured-img">
+                <div class="featured-content">
+                    <span class="featured-badge">💜 Exclusivo para Mujeres</span>
+                    <h3>Seguro de la Mujer</h3>
+                    <p>Un seguro único diseñado específicamente para cubrir las necesidades de la mujer moderna.
+                        Protección integral durante todas las etapas de tu vida.</p>
+
+                    <ul class="featured-benefits">
+                        <li>Revisiones ginecológicas anuales</li>
+                        <li>Mamografía y ecografías incluidas</li>
+                        <li>Cobertura de maternidad completa</li>
+                        <li>Cirugía estética reparadora</li>
+                        <li>Apoyo psicológico por violencia de género</li>
+                        <li>Asistencia jurídica especializada</li>
+                    </ul>
+
+                    <p class="featured-price">Desde 12€/mes <span>· Cobertura total</span></p>
+                </div>
+            </a>
+
+            <!-- Seguro de Decesos -->
+            <a href="/seguro-decesos" class="featured-card">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=300&fit=crop"
+                    alt="Familia unida" class="featured-img">
+                <div class="featured-content">
+                    <span class="featured-badge">🕊️ Tranquilidad Familiar</span>
+                    <h3>Seguro de Decesos</h3>
+                    <p>Dale tranquilidad a tu familia. Nos encargamos de todo para que tus seres queridos no tengan que
+                        preocuparse de nada en los momentos más difíciles.</p>
+
+                    <ul class="featured-benefits">
+                        <li>Servicio completo 24 horas</li>
+                        <li>Gestiones legales y administrativas</li>
+                        <li>Cobertura en toda España</li>
+                        <li>Sin límite de edad para contratar</li>
+                        <li>Traslado nacional e internacional</li>
+                        <li>Asistencia familiar incluida</li>
+                    </ul>
+
+                    <p class="featured-price">Desde 5€/mes <span>· Familiar o individual</span></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Servicios -->
 <section class="services">
     <div class="container">
-        <h2 class="section-title">Nuestros Seguros 💖</h2>
+        <h2 class="section-title">Todos Nuestros Seguros 💖</h2>
         <p class="section-subtitle">Protección completa para ti y tu familia en la Sierra de Madrid</p>
 
         <div class="services-grid">
             <a href="/seguro-hogar" class="service-card">
-                <span class="service-icon">🏠</span>
-                <h3>Seguro de Hogar</h3>
-                <p>Protege tu hogar en la Sierra. Coberturas completas.</p>
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=300&h=200&fit=crop"
+                    alt="Casa moderna" class="service-img">
+                <h3>🏠 Seguro de Hogar</h3>
+                <p>Protege tu hogar en la Sierra. Coberturas completas desde 15€/mes.</p>
             </a>
 
             <a href="/seguro-coche" class="service-card">
-                <span class="service-icon">🚗</span>
-                <h3>Seguro de Coche</h3>
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=300&h=200&fit=crop"
+                    alt="Coche circulando" class="service-img">
+                <h3>🚗 Seguro de Coche</h3>
                 <p>Terceros, todo riesgo y franquicia al mejor precio.</p>
             </a>
 
             <a href="/seguro-vida" class="service-card">
-                <span class="service-icon">💚</span>
-                <h3>Seguro de Vida</h3>
+                <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=300&h=200&fit=crop"
+                    alt="Familia feliz" class="service-img">
+                <h3>💚 Seguro de Vida</h3>
                 <p>Garantiza el futuro de los que más quieres.</p>
             </a>
 
-            <a href="/seguro-decesos" class="service-card">
-                <span class="service-icon">🕊️</span>
-                <h3>Seguro de Decesos</h3>
-                <p>Tranquilidad para toda la familia.</p>
-            </a>
-
             <a href="/seguro-salud" class="service-card">
-                <span class="service-icon">🏥</span>
-                <h3>Seguro de Salud</h3>
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=300&h=200&fit=crop"
+                    alt="Médico sonriendo" class="service-img">
+                <h3>🏥 Seguro de Salud</h3>
                 <p>Acceso a los mejores especialistas sin esperas.</p>
             </a>
 
+            <a href="/seguro-mascotas" class="service-card">
+                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=200&fit=crop"
+                    alt="Perro feliz" class="service-img">
+                <h3>🐾 Seguro de Mascotas</h3>
+                <p>Protección veterinaria para tu mejor amigo.</p>
+            </a>
+
             <a href="/comparador" class="service-card service-card-cta">
-                <span class="service-icon">✨</span>
-                <h3>Comparador Gratis</h3>
-                <p>Encuentra el mejor precio en 2 minutos.</p>
+                <div class="cta-content">
+                    <span class="cta-icon">✨</span>
+                    <h3>Comparador Gratis</h3>
+                    <p>Encuentra el mejor precio en 2 minutos.</p>
+                </div>
             </a>
         </div>
     </div>
@@ -102,39 +164,74 @@
 
         <div class="features-grid">
             <div class="feature">
-                <div class="feature-icon">💰</div>
+                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=120&h=120&fit=crop"
+                    alt="Ahorro" class="feature-img">
                 <div>
-                    <h3>Ahorro Garantizado</h3>
+                    <h3>Ahorro Garantizado 💰</h3>
                     <p>Comparamos más de 20 aseguradoras para encontrarte el mejor precio. Nuestros clientes ahorran una
                         media de 287€ al año.</p>
                 </div>
             </div>
 
             <div class="feature">
-                <div class="feature-icon">👩</div>
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=120&h=120&fit=crop"
+                    alt="Atención personalizada" class="feature-img">
                 <div>
-                    <h3>Atención Cercana</h3>
+                    <h3>Atención Cercana 👩</h3>
                     <p>Somos de aquí, conocemos la zona. Te atendemos personalmente en Villalba y alrededores. ¡Ven a
                         vernos!</p>
                 </div>
             </div>
 
             <div class="feature">
-                <div class="feature-icon">🎁</div>
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=120&h=120&fit=crop"
+                    alt="Servicio gratuito" class="feature-img">
                 <div>
-                    <h3>100% Gratuito</h3>
+                    <h3>100% Gratuito 🎁</h3>
                     <p>Nuestro servicio de asesoramiento y comparación es totalmente gratuito. Sin compromiso ni letra
                         pequeña.</p>
                 </div>
             </div>
 
             <div class="feature">
-                <div class="feature-icon">⚡</div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&h=120&fit=crop"
+                    alt="Respuesta rápida" class="feature-img">
                 <div>
-                    <h3>Respuesta Rápida</h3>
+                    <h3>Respuesta Rápida ⚡</h3>
                     <p>Te respondemos en menos de 24 horas con una comparativa personalizada de las mejores opciones.
                     </p>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Galería Sierra de Madrid -->
+<section class="gallery">
+    <div class="container">
+        <h2 class="section-title">Nuestra Sierra 🏔️</h2>
+        <p class="section-subtitle">Protegemos a las familias del Noroeste de Madrid</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop"
+                    alt="Montañas de Guadarrama">
+                <span class="gallery-label">Sierra de Guadarrama</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=400&h=300&fit=crop"
+                    alt="Casa en la sierra">
+                <span class="gallery-label">Hogares Protegidos</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=400&h=300&fit=crop"
+                    alt="Familia sonriendo">
+                <span class="gallery-label">Familias Felices</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop"
+                    alt="Llaves de casa">
+                <span class="gallery-label">Tu Nuevo Hogar</span>
             </div>
         </div>
     </div>
@@ -146,55 +243,68 @@
         <h2 class="section-title">Solicita tu Presupuesto Gratis 🌟</h2>
         <p class="section-subtitle">Te contactamos en menos de 24 horas. ¡Sin compromiso!</p>
 
-        <form id="contact-form" class="contact-form">
-            <div class="form-group">
-                <label for="nombre">Nombre completo *</label>
-                <input type="text" id="nombre" name="nombre" required minlength="2" placeholder="Tu nombre">
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefono">Teléfono *</label>
-                    <input type="tel" id="telefono" name="telefono" required minlength="9" placeholder="612 345 678">
+        <div class="contact-wrapper">
+            <div class="contact-image">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=600&fit=crop"
+                    alt="Asesora de seguros sonriendo">
+                <div class="contact-badge">
+                    <span>💬</span>
+                    <p>¡Hola! Soy tu asesora personal. Cuéntame qué necesitas.</p>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="tipo_seguro">Tipo de seguro *</label>
-                <select id="tipo_seguro" name="tipo_seguro" required>
-                    <option value="">Selecciona...</option>
-                    <option value="hogar">🏠 Seguro de Hogar</option>
-                    <option value="auto">🚗 Seguro de Coche</option>
-                    <option value="vida">💚 Seguro de Vida</option>
-                    <option value="decesos">🕊️ Seguro de Decesos</option>
-                    <option value="salud">🏥 Seguro de Salud</option>
-                    <option value="mascotas">🐾 Seguro de Mascotas</option>
-                    <option value="otro">📋 Otro / Consulta General</option>
-                </select>
-            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="2" placeholder="Tu nombre">
+                </div>
 
-            <div class="form-group">
-                <label for="mensaje">Mensaje (opcional)</label>
-                <textarea id="mensaje" name="mensaje" rows="4"
-                    placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
-            </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+                    </div>
 
-            <div class="form-group checkbox">
-                <input type="checkbox" id="privacidad" name="privacidad" required>
-                <label for="privacidad">
-                    He leído y acepto la <a href="/politica-privacidad" target="_blank">política de privacidad</a> *
-                </label>
-            </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required minlength="9"
+                            placeholder="612 345 678">
+                    </div>
+                </div>
 
-            <button type="submit" class="btn btn-primary btn-block btn-lg">
-                ✨ Solicitar Presupuesto Gratis
-            </button>
-        </form>
+                <div class="form-group">
+                    <label for="tipo_seguro">Tipo de seguro *</label>
+                    <select id="tipo_seguro" name="tipo_seguro" required>
+                        <option value="">Selecciona...</option>
+                        <option value="mujer">💜 Seguro de la Mujer ⭐</option>
+                        <option value="decesos">🕊️ Seguro de Decesos ⭐</option>
+                        <option value="hogar">🏠 Seguro de Hogar</option>
+                        <option value="auto">🚗 Seguro de Coche</option>
+                        <option value="vida">💚 Seguro de Vida</option>
+                        <option value="salud">🏥 Seguro de Salud</option>
+                        <option value="mascotas">🐾 Seguro de Mascotas</option>
+                        <option value="otro">📋 Otro / Consulta General</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje (opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"
+                        placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad">
+                        He leído y acepto la <a href="/politica-privacidad" target="_blank">política de privacidad</a> *
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">
+                    ✨ Solicitar Presupuesto Gratis
+                </button>
+            </form>
+        </div>
     </div>
 </section>
 
@@ -214,7 +324,7 @@
             <span class="zone-tag">🌿 Cercedilla</span>
             <span class="zone-tag">🌳 Moralzarzal</span>
             <span class="zone-tag">🏔️ Navacerrada</span>
-            <span class="zone-tag">🌲 El Escorial</span>
+            <span class="zone-tag">🏰 El Escorial</span>
         </div>
     </div>
 </section>
@@ -227,7 +337,7 @@
         e.preventDefault();
 
         const btn = this.querySelector('button[type="submit"]');
-        const originalText = btn.innerHTML;
+        const textoOriginal = btn.innerHTML;
         btn.innerHTML = '⏳ Enviando...';
         btn.disabled = true;
 
@@ -253,65 +363,61 @@
             const data = await response.json();
 
             if (data.success) {
-                // Mostrar mensaje de éxito
                 btn.innerHTML = '🎉 ¡Enviado!';
-                btn.style.background = 'linear-gradient(135deg, #32CD32, #7FFF00)';
-
-                // Confetti effect simple
-                createConfetti();
+                btn.style.background = 'linear-gradient(135deg, #7FFF00, #32CD32)';
+                crearConfeti();
 
                 setTimeout(() => {
                     alert('🎉 ¡Gracias! Hemos recibido tu solicitud. Te contactaremos muy pronto.');
                     this.reset();
-                    btn.innerHTML = originalText;
+                    btn.innerHTML = textoOriginal;
                     btn.style.background = '';
                     btn.disabled = false;
                 }, 1000);
             } else {
-                btn.innerHTML = originalText;
+                btn.innerHTML = textoOriginal;
                 btn.disabled = false;
                 alert('Error: ' + (data.detail || 'Ha ocurrido un error'));
             }
         } catch (error) {
             console.error('Error:', error);
-            btn.innerHTML = originalText;
+            btn.innerHTML = textoOriginal;
             btn.disabled = false;
             alert('Error al enviar el formulario. Inténtalo de nuevo.');
         }
     });
 
-    // Confetti simple
-    function createConfetti() {
-        const colors = ['#FF6B6B', '#FF69B4', '#32CD32', '#40E0D0', '#FFD93D'];
-        for (let i = 0; i < 50; i++) {
-            const confetti = document.createElement('div');
-            confetti.style.cssText = `
+    // Efecto confeti
+    function crearConfeti() {
+        const colores = ['#7FFF00', '#FFD700', '#FF6B00', '#00BFFF', '#9B59B6', '#FF00FF'];
+        for (let i = 0; i < 80; i++) {
+            const confeti = document.createElement('div');
+            confeti.style.cssText = `
             position: fixed;
-            width: 10px;
-            height: 10px;
-            background: ${colors[Math.floor(Math.random() * colors.length)]};
+            width: ${5 + Math.random() * 10}px;
+            height: ${5 + Math.random() * 10}px;
+            background: ${colores[Math.floor(Math.random() * colores.length)]};
             left: ${Math.random() * 100}vw;
             top: -10px;
-            border-radius: 50%;
+            border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
             pointer-events: none;
             z-index: 9999;
-            animation: fall ${2 + Math.random() * 2}s linear forwards;
+            animation: caer ${2 + Math.random() * 2}s linear forwards;
         `;
-            document.body.appendChild(confetti);
-            setTimeout(() => confetti.remove(), 4000);
+            document.body.appendChild(confeti);
+            setTimeout(() => confeti.remove(), 4000);
         }
     }
 
-    // Añadir keyframes para confetti
-    const style = document.createElement('style');
-    style.textContent = `
-    @keyframes fall {
+    const estilo = document.createElement('style');
+    estilo.textContent = `
+    @keyframes caer {
         to {
             transform: translateY(100vh) rotate(720deg);
             opacity: 0;
         }
     }
 `;
-    document.head.appendChild(style);
+    document.head.appendChild(estilo);
 </script>
 {% endblock %}

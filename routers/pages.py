@@ -98,6 +98,19 @@ async def seguro_salud(request: Request):
     )
 
 
+@router.get("/seguro-mujer", response_class=HTMLResponse)
+async def seguro_mujer(request: Request):
+    """Página de seguro de la mujer - Producto estrella"""
+    return templates.TemplateResponse(
+        "pages/seguro-mujer.html",
+        {
+            "request": request,
+            "titulo": f"Seguro de la Mujer en {ZONA} | SegurosPy",
+            "meta_description": f"Seguro exclusivo para mujeres con coberturas ginecológicas, maternidad y más. Villalba, Galapagar, Alpedrete y toda la Sierra."
+        }
+    )
+
+
 @router.get("/comparador", response_class=HTMLResponse)
 async def comparador(request: Request):
     """Comparador de seguros"""
