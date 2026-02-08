@@ -163,6 +163,32 @@ async def privacidad(request: Request):
     )
 
 
+@router.get("/aviso-legal", response_class=HTMLResponse)
+async def aviso_legal(request: Request):
+    """Aviso legal"""
+    return templates.TemplateResponse(
+        "pages/aviso-legal.html",
+        {
+            "request": request,
+            "titulo": "Aviso Legal | SegurosPy",
+            "meta_description": "Aviso legal y condiciones de uso de SegurosPy."
+        }
+    )
+
+
+@router.get("/cookies", response_class=HTMLResponse)
+async def cookies(request: Request):
+    """Política de cookies"""
+    return templates.TemplateResponse(
+        "pages/cookies.html",
+        {
+            "request": request,
+            "titulo": "Política de Cookies | SegurosPy",
+            "meta_description": "Información sobre el uso de cookies en SegurosPy."
+        }
+    )
+
+
 # =============================================
 # ARTÍCULOS DEL BLOG - SEO
 # =============================================

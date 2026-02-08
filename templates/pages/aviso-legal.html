@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="legal-page">
+    <div class="container">
+        <h1>Aviso Legal</h1>
+        <p class="last-updated">Última actualización: 8 de febrero de 2026</p>
+
+        <div class="legal-content">
+            <h2>1. Datos identificativos</h2>
+            <p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de
+                Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se reflejan los
+                siguientes datos:</p>
+            <ul>
+                <li><strong>Titular:</strong> SegurosPy (Cándida)</li>
+                <li><strong>Domicilio:</strong> Collado Villalba, Madrid</li>
+                <li><strong>Email:</strong> norte.oficina.villalba@gmail.com</li>
+                <li><strong>Actividad:</strong> Mediación de seguros</li>
+            </ul>
+
+            <h2>2. Usuarios</h2>
+            <p>El acceso y/o uso de este portal de SegurosPy atribuye la condición de USUARIO, que acepta, desde dicho
+                acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.</p>
+
+            <h2>3. Uso del portal</h2>
+            <p>SegurosPy proporciona el acceso a multitud de informaciones, servicios o datos en Internet pertenecientes
+                a SegurosPy o a sus licenciantes a los que el USUARIO pueda tener acceso.</p>
+
+            <h2>4. Propiedad intelectual</h2>
+            <p>SegurosPy es titular de todos los derechos de propiedad intelectual e industrial de su página web, así
+                como de los elementos contenidos en la misma.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .legal-page {
+        padding: 80px 0;
+        line-height: 1.6;
+    }
+
+    .legal-page h1 {
+        margin-bottom: 20px;
+        color: var(--primary-color);
+    }
+
+    .last-updated {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 40px;
+    }
+
+    .legal-content h2 {
+        margin: 30px 0 15px;
+        font-size: 1.5rem;
+    }
+</style>
+{% endblock %}

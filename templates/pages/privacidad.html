@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="legal-page">
+    <div class="container">
+        <h1>Política de Privacidad</h1>
+        <p class="last-updated">Última actualización: 8 de febrero de 2026</p>
+
+        <div class="legal-content">
+            <h2>1. Información al usuario</h2>
+            <p>SegurosPy, como responsable del tratamiento, le informa de que, según lo dispuesto en el RGPD y la
+                LOPDGDD, trataremos sus datos tal y como reflejamos en la presente Política de Privacidad.</p>
+
+            <h2>2. ¿Para qué tratamos tus datos?</h2>
+            <p>Tratamos los datos que nos facilitas para:</p>
+            <ul>
+                <li>Gestionar las solicitudes de información y presupuestos de seguros.</li>
+                <li>Enviar comunicaciones comerciales relacionadas con nuestros servicios (siempre que nos hayas dado tu
+                    consentimiento).</li>
+                <li>Mejorar tu experiencia de usuario en nuestra web.</li>
+            </ul>
+
+            <h2>3. Legitimación</h2>
+            <p>La base legal para el tratamiento de tus datos es el consentimiento que nos otorgas al marcar la casilla
+                de aceptación en nuestros formularios.</p>
+
+            <h2>4. ¿A quién comunicamos tus datos?</h2>
+            <p>Tus datos podrán ser comunicados a las compañías aseguradoras con las que colaboramos únicamente con la
+                finalidad de obtener el presupuesto de seguro solicitado.</p>
+
+            <h2>5. Tus derechos</h2>
+            <p>Tienes derecho a acceder, rectificar y suprimir tus datos, así como otros derechos explicados en la
+                información adicional que puedes solicitar en nuestro correo: norte.oficina.villalba@gmail.com</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .legal-page {
+        padding: 80px 0;
+        line-height: 1.6;
+    }
+
+    .legal-page h1 {
+        margin-bottom: 20px;
+        color: var(--primary-color);
+    }
+
+    .last-updated {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 40px;
+    }
+
+    .legal-content h2 {
+        margin: 30px 0 15px;
+        font-size: 1.5rem;
+    }
+
+    .legal-content p,
+    .legal-content ul {
+        margin-bottom: 15px;
+        color: #444;
+    }
+
+    .legal-content ul {
+        padding-left: 20px;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="legal-page">
+    <div class="container">
+        <h1>Política de Cookies</h1>
+        <p class="last-updated">Última actualización: 8 de febrero de 2026</p>
+
+        <div class="legal-content">
+            <h2>¿Qué son las cookies?</h2>
+            <p>Una cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las
+                cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los
+                hábitos de navegación de un usuario.</p>
+
+            <h2>Tipos de cookies que utilizamos</h2>
+            <ul>
+                <li><strong>Cookies técnicas:</strong> Necesarias para el funcionamiento de la web.</li>
+                <li><strong>Cookies de análisis:</strong> Nos permiten cuantificar el número de usuarios y realizar la
+                    medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado.</li>
+            </ul>
+
+            <h2>Cómo desactivar las cookies</h2>
+            <p>Usted puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración
+                de las opciones del navegador instalado en su ordenador.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .legal-page {
+        padding: 80px 0;
+        line-height: 1.6;
+    }
+
+    .legal-page h1 {
+        margin-bottom: 20px;
+        color: var(--primary-color);
+    }
+
+    .last-updated {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 40px;
+    }
+</style>
+{% endblock %}
