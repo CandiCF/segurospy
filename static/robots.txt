@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://segurospy.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /docs
+Disallow: /redoc
