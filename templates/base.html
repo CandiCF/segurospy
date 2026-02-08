@@ -36,22 +36,11 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "InsuranceAgency",
-        "name": "Candi Seguros",
+        "@type": "SoftwareApplication",
+        "name": "SegurosPy",
         "description": "{{ meta_description }}",
-        "url": "https://candiseguros.com",
-        "telephone": "+34661854126",
-        "email": "candi@candiseguros.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Av. Cañada Real",
-            "addressLocality": "Los Molinos",
-            "postalCode": "28460",
-            "addressRegion": "Madrid",
-            "addressCountry": "ES"
-        },
-        "areaServed": ["Madrid", "Las Rozas", "Majadahonda", "Los Molinos"],
-        "priceRange": "€€"
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web"
     }
     </script>
 
@@ -64,8 +53,8 @@
         <div class="container">
             <nav class="nav">
                 <a href="/" class="logo">
-                    <span class="logo-icon">🛡️</span>
-                    <span class="logo-text">Candi Seguros</span>
+                    <span class="logo-icon">🐍</span>
+                    <span class="logo-text">SegurosPy</span>
                 </a>
 
                 <ul class="nav-links">
@@ -108,9 +97,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>🛡️ Candi Seguros</h4>
-                    <p>Tu agente de seguros de confianza en Madrid. Comparamos más de 20 aseguradoras para encontrarte
-                        el mejor precio.</p>
+                    <h4>🐍 SegurosPy</h4>
+                    <p>Sistema de gestión web para corredurías de seguros. Desarrollado con Python y FastAPI.</p>
                 </div>
 
                 <div class="footer-col">
@@ -127,10 +115,9 @@
                 <div class="footer-col">
                     <h4>Contacto</h4>
                     <ul>
-                        <li>📞 661 854 126</li>
-                        <li>📧 candi@candiseguros.com</li>
-                        <li>📍 Los Molinos, Madrid</li>
-                        <li>🕐 L-V: 10:00 - 19:00</li>
+                        <li>📧 info@segurospy.com</li>
+                        <li>🐙 github.com/segurospy</li>
+                        <li>🐍 Python + FastAPI</li>
                     </ul>
                 </div>
 
@@ -145,7 +132,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; {{ now.year if now else "2026" }} Candi Seguros. Todos los derechos reservados.</p>
+                <p>&copy; {{ now.year if now else "2026" }} SegurosPy. Open Source Project.</p>
                 <p class="footer-tech">
                     Desarrollado con <span style="color: #e74c3c;">❤️</span> y
                     <span style="color: #3776ab;">Python</span> +
@@ -178,7 +165,7 @@
             </div>
             <div class="chat-messages" id="chat-messages">
                 <div class="message bot">
-                    ¡Hola! 👋 Soy el asistente virtual de Candi Seguros. ¿En qué puedo ayudarte?
+                    ¡Hola! 👋 Soy el asistente virtual de SegurosPy. ¿En qué puedo ayudarte?
                 </div>
             </div>
             <div class="chat-input">

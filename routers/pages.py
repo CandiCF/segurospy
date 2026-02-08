@@ -22,7 +22,7 @@ async def home(request: Request):
         "pages/index.html",
         {
             "request": request,
-            "titulo": "Candi Seguros - Tu Agente de Seguros en Madrid",
+            "titulo": "SegurosPy - Tu Agente de Seguros en Madrid",
             "meta_description": "Correduría de seguros en Madrid. Comparamos más de 20 aseguradoras para ofrecerte el mejor precio en seguros de hogar, auto, vida y más."
         }
     )
@@ -35,7 +35,7 @@ async def seguro_hogar(request: Request):
         "pages/seguro-hogar.html",
         {
             "request": request,
-            "titulo": "Seguro de Hogar en Madrid | Candi Seguros",
+            "titulo": "Seguro de Hogar en Madrid | SegurosPy",
             "meta_description": "Protege tu hogar con las mejores coberturas. Comparamos todas las aseguradoras para encontrarte el mejor precio."
         }
     )
@@ -48,7 +48,7 @@ async def seguro_coche(request: Request):
         "pages/seguro-coche.html",
         {
             "request": request,
-            "titulo": "Seguro de Coche en Madrid | Candi Seguros",
+            "titulo": "Seguro de Coche en Madrid | SegurosPy",
             "meta_description": "Ahorra hasta un 40% en tu seguro de coche. Terceros, todo riesgo y franquicia. Comparamos más de 20 aseguradoras."
         }
     )
@@ -61,7 +61,7 @@ async def seguro_vida(request: Request):
         "pages/seguro-vida.html",
         {
             "request": request,
-            "titulo": "Seguro de Vida en Madrid | Candi Seguros",
+            "titulo": "Seguro de Vida en Madrid | SegurosPy",
             "meta_description": "Protege el futuro de tu familia con un seguro de vida. Desde 10€/mes. Asesoramiento gratuito."
         }
     )
@@ -74,7 +74,7 @@ async def seguro_decesos(request: Request):
         "pages/seguro-decesos.html",
         {
             "request": request,
-            "titulo": "Seguro de Decesos en Madrid | Candi Seguros",
+            "titulo": "Seguro de Decesos en Madrid | SegurosPy",
             "meta_description": "Tranquilidad para ti y tu familia. Seguro de decesos con todas las gestiones incluidas. Consulta sin compromiso."
         }
     )
@@ -87,7 +87,7 @@ async def seguro_salud(request: Request):
         "pages/seguro-salud.html",
         {
             "request": request,
-            "titulo": "Seguro de Salud en Madrid | Candi Seguros",
+            "titulo": "Seguro de Salud en Madrid | SegurosPy",
             "meta_description": "Accede a los mejores especialistas sin esperas. Seguros de salud adaptados a tus necesidades."
         }
     )
@@ -100,7 +100,7 @@ async def comparador(request: Request):
         "pages/comparador.html",
         {
             "request": request,
-            "titulo": "Comparador de Seguros en Madrid | Candi Seguros",
+            "titulo": "Comparador de Seguros en Madrid | SegurosPy",
             "meta_description": "Compara seguros de auto, hogar, vida y más. Más de 20 aseguradoras. Cotización en 2 minutos."
         }
     )
@@ -113,7 +113,7 @@ async def blog(request: Request):
         "pages/blog.html",
         {
             "request": request,
-            "titulo": "Blog de Seguros | Candi Seguros",
+            "titulo": "Blog de Seguros | SegurosPy",
             "meta_description": "Artículos y guías sobre seguros. Aprende a elegir el mejor seguro para ti."
         }
     )
@@ -126,8 +126,8 @@ async def contacto(request: Request):
         "pages/contacto.html",
         {
             "request": request,
-            "titulo": "Contacto | Candi Seguros",
-            "meta_description": "Contacta con Candi Seguros. Teléfono: 661 854 126. Email: candi@candiseguros.com"
+            "titulo": "Contacto | SegurosPy",
+            "meta_description": "Contacta con SegurosPy. Teléfono: 661 854 126. Email: info@segurospy.com"
         }
     )
 
@@ -139,7 +139,7 @@ async def privacidad(request: Request):
         "pages/privacidad.html",
         {
             "request": request,
-            "titulo": "Política de Privacidad | Candi Seguros",
-            "meta_description": "Política de privacidad y protección de datos de Candi Seguros."
+            "titulo": "Política de Privacidad | SegurosPy",
+            "meta_description": "Política de privacidad y protección de datos de SegurosPy."
         }
     )

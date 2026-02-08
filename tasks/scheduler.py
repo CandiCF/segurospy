@@ -107,7 +107,7 @@ async def tarea_solicitar_resenas():
             # Enviar email de solicitud
             exito = await email_service.enviar_email(
                 destinatario=lead.email,
-                asunto="¿Qué tal tu experiencia con Candi Seguros? ⭐",
+                asunto="¿Qué tal tu experiencia con SegurosPy? ⭐",
                 contenido_html=f"""
                 <html>
                 <body style="font-family: Arial, sans-serif; padding: 20px;">
@@ -123,7 +123,7 @@ async def tarea_solicitar_resenas():
                         </a>
                     </p>
                     <p>¡Gracias por confiar en nosotros!</p>
-                    <p><strong>El equipo de Candi Seguros</strong></p>
+                    <p><strong>El equipo de SegurosPy</strong></p>
                 </body>
                 </html>
                 """

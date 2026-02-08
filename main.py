@@ -1,6 +1,6 @@
 """
 SegurosPy - Aplicación Principal
-Equivalente a todo el sistema de candiseguros.com pero en Python
+Equivalente a todo el sistema de segurospy.com pero en Python
 
 Ejecutar con: uvicorn main:app --reload
 """
@@ -76,7 +76,7 @@ app = FastAPI(
 # Configurar CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"] if settings.debug else ["https://candiseguros.com"],
+    allow_origins=["*"] if settings.debug else ["https://segurospy.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

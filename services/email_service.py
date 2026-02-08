@@ -144,7 +144,7 @@ class EmailService:
         """
         Envía email de confirmación al cliente
         """
-        asunto = "✅ Hemos recibido tu solicitud - Candi Seguros"
+        asunto = "✅ Hemos recibido tu solicitud - SegurosPy"
         
         html = f"""
         <!DOCTYPE html>
@@ -170,7 +170,7 @@ class EmailService:
                 <div class="content">
                     <p>Hola {lead_data['nombre']},</p>
                     
-                    <p>Gracias por confiar en <strong>Candi Seguros</strong>. Hemos recibido 
+                    <p>Gracias por confiar en <strong>SegurosPy</strong>. Hemos recibido 
                     tu solicitud de información sobre <strong>seguro de {lead_data['tipo_seguro']}</strong>.</p>
                     
                     <div class="highlight">
@@ -183,15 +183,15 @@ class EmailService:
                     <ul>
                         <li>📞 Teléfono: 661 854 126</li>
                         <li>💬 WhatsApp: 661 854 126</li>
-                        <li>📧 Email: candi@candiseguros.com</li>
+                        <li>📧 Email: info@segurospy.com</li>
                     </ul>
                     
                     <p>¡Gracias por elegirnos!</p>
-                    <p><strong>El equipo de Candi Seguros</strong></p>
+                    <p><strong>El equipo de SegurosPy</strong></p>
                 </div>
                 <div class="footer">
-                    <p>Candi Seguros - Tu agente de seguros de confianza en Madrid</p>
-                    <p>Los Molinos, Madrid | candiseguros.com</p>
+                    <p>SegurosPy - Tu agente de seguros de confianza en Madrid</p>
+                    <p>Los Molinos, Madrid | segurospy.com</p>
                 </div>
             </div>
         </body>

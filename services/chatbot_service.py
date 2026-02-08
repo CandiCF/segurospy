@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 # Prompt del sistema para el chatbot
-SYSTEM_PROMPT = """Eres el asistente virtual de Candi Seguros, una correduría de seguros en Madrid especializada en:
+SYSTEM_PROMPT = """Eres el asistente virtual de SegurosPy, una correduría de seguros en Madrid especializada en:
 - Seguros de Hogar
 - Seguros de Auto/Coche
 - Seguros de Vida
@@ -28,7 +28,7 @@ Tu objetivo es:
 
 Información de contacto:
 - Teléfono/WhatsApp: 661 854 126
-- Email: candi@candiseguros.com
+- Email: info@segurospy.com
 - Horario: Lunes a Viernes 10:00-19:00
 - Zona: Madrid, Las Rozas, Majadahonda, Los Molinos y Sierra de Madrid
 
@@ -142,9 +142,9 @@ class ChatbotService:
         elif any(p in mensaje_lower for p in ["mascota", "perro", "gato"]):
             respuesta = "🐾 ¡Protege a tu peludo! Cubrimos veterinario, responsabilidad civil y más. ¿Qué tipo de mascota tienes?"
         elif any(p in mensaje_lower for p in ["hola", "buenos", "buenas"]):
-            respuesta = "👋 ¡Hola! Soy el asistente virtual de Candi Seguros. ¿En qué puedo ayudarte? Puedo informarte sobre seguros de hogar, auto, vida, salud y más."
+            respuesta = "👋 ¡Hola! Soy el asistente virtual de SegurosPy. ¿En qué puedo ayudarte? Puedo informarte sobre seguros de hogar, auto, vida, salud y más."
         elif any(p in mensaje_lower for p in ["contacto", "llamar", "teléfono", "telefono", "whatsapp"]):
-            respuesta = "📞 Puedes contactarnos en:\n• Teléfono/WhatsApp: 661 854 126\n• Email: candi@candiseguros.com\n• Horario: L-V 10:00-19:00"
+            respuesta = "📞 Puedes contactarnos en:\n• Teléfono/WhatsApp: 661 854 126\n• Email: info@segurospy.com\n• Horario: L-V 10:00-19:00"
         else:
             respuesta = "Gracias por tu mensaje. Para darte la mejor información, ¿podrías indicarme qué tipo de seguro te interesa? (hogar, coche, vida, salud, decesos, mascotas)"
         

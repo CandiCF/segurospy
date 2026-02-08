@@ -197,5 +197,5 @@ console.log(`
 🐍 SegurosPy - Desarrollado con Python + FastAPI
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ¿Eres desarrollador? ¡Contáctanos!
-📧 candi@candiseguros.com
+📧 info@segurospy.com
 `);

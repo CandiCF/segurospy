@@ -2,13 +2,13 @@
 
 **Sistema de Gestión Web para Corredurías de Seguros desarrollado en Python**
 
-Este proyecto es la versión Python del sistema de Candi Seguros, demostrando cómo implementar las mismas funcionalidades usando un stack de Python moderno.
+Este proyecto es la versión Python del sistema de SegurosPy, demostrando cómo implementar las mismas funcionalidades usando un stack de Python moderno.
 
 ---
 
 ## 📊 Comparación: HTML Estático vs Python
 
-| Característica | HTML Estático (candiseguros) | Python (segurosPy) |
+| Característica | HTML Estático (segurospy) | Python (segurosPy) |
 |----------------|------------------------------|---------------------|
 | **Tecnología Frontend** | HTML/CSS/JS puros | Jinja2 Templates |
 | **Comparador** | React + Vite | Python + Jinja2 |
@@ -152,7 +152,7 @@ Equivalentes a los workflows de n8n:
 
 ```env
 # App
-APP_NAME="Candi Seguros"
+APP_NAME="SegurosPy"
 DEBUG=true
 SECRET_KEY=tu-clave-secreta
 
@@ -233,7 +233,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 ## 🆚 ¿Cuándo usar cada versión?
 
-### Usa HTML Estático (candiseguros) cuando:
+### Usa HTML Estático (segurospy) cuando:
 - ✅ Solo necesitas una web informativa
 - ✅ No necesitas base de datos propia
 - ✅ Quieres hosting muy barato
@@ -259,14 +259,14 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 ## 📞 Soporte
 
-- **Email**: candi@candiseguros.com
+- **Email**: info@segurospy.com
 - **WhatsApp**: 661 854 126
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto es privado y de uso exclusivo para Candi Seguros.
+Este proyecto es privado y de uso exclusivo para SegurosPy.
 
 ---
 

@@ -128,7 +128,7 @@ class ArticuloBlog(Base):
     fecha_publicacion = Column(DateTime, nullable=True)
     
     # Metadatos
-    autor = Column(String(100), default="Candi Seguros")
+    autor = Column(String(100), default="SegurosPy")
     tiempo_lectura = Column(Integer, default=5)  # minutos
     
     created_at = Column(DateTime, default=datetime.utcnow)
