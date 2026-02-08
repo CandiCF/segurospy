@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Tu Agente de Seguros de Confianza en Madrid</h1>
+            <p class="hero-subtitle">
+                Comparamos más de 20 aseguradoras para encontrarte el mejor precio.
+                Ahorra hasta un 40% en tus seguros.
+            </p>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Aseguradoras</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">287€</span>
+                    <span class="stat-label">Ahorro medio</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.9★</span>
+                    <span class="stat-label">Valoración</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="/comparador" class="btn btn-primary btn-lg">
+                    🔍 Comparar Seguros
+                </a>
+                <a href="tel:+34661854126" class="btn btn-outline btn-lg">
+                    📞 Llamar Ahora
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="/static/images/hero-family.svg" alt="Familia protegida con seguros">
+        </div>
+    </div>
+</section>
+
+<!-- Servicios -->
+<section class="services">
+    <div class="container">
+        <h2 class="section-title">Nuestros Seguros</h2>
+        <p class="section-subtitle">Protección completa para ti y tu familia</p>
+
+        <div class="services-grid">
+            <a href="/seguro-hogar" class="service-card">
+                <span class="service-icon">🏠</span>
+                <h3>Seguro de Hogar</h3>
+                <p>Protege tu vivienda y todo su contenido</p>
+            </a>
+
+            <a href="/seguro-coche" class="service-card">
+                <span class="service-icon">🚗</span>
+                <h3>Seguro de Coche</h3>
+                <p>Terceros, todo riesgo y con franquicia</p>
+            </a>
+
+            <a href="/seguro-vida" class="service-card">
+                <span class="service-icon">💚</span>
+                <h3>Seguro de Vida</h3>
+                <p>Garantiza el futuro de tu familia</p>
+            </a>
+
+            <a href="/seguro-decesos" class="service-card">
+                <span class="service-icon">🕊️</span>
+                <h3>Seguro de Decesos</h3>
+                <p>Tranquilidad en los momentos difíciles</p>
+            </a>
+
+            <a href="/seguro-salud" class="service-card">
+                <span class="service-icon">🏥</span>
+                <h3>Seguro de Salud</h3>
+                <p>Acceso a los mejores especialistas</p>
+            </a>
+
+            <a href="/comparador" class="service-card service-card-cta">
+                <span class="service-icon">🔍</span>
+                <h3>Comparador</h3>
+                <p>Encuentra el mejor precio en segundos</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Por qué elegirnos -->
+<section class="why-us">
+    <div class="container">
+        <h2 class="section-title">¿Por qué Candi Seguros?</h2>
+
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <h3>Ahorro Garantizado</h3>
+                <p>Comparamos más de 20 aseguradoras para encontrarte el mejor precio. Nuestros clientes ahorran una
+                    media de 287€ al año.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">👤</div>
+                <h3>Atención Personal</h3>
+                <p>No somos una centralita. Tenemos nombre y cara. Te atendemos personalmente y te acompañamos en todo
+                    momento.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>100% Gratuito</h3>
+                <p>Nuestro servicio de asesoramiento y comparación es totalmente gratuito. Sin compromiso ni letra
+                    pequeña.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Respuesta Rápida</h3>
+                <p>Te respondemos en menos de 24 horas con una comparativa personalizada de las mejores opciones.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formulario de Contacto -->
+<section class="contact-section" id="contacto">
+    <div class="container">
+        <h2 class="section-title">Solicita tu Presupuesto Gratis</h2>
+        <p class="section-subtitle">Un asesor te contactará en menos de 24 horas</p>
+
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required minlength="2">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required minlength="9">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo_seguro">Tipo de seguro *</label>
+                <select id="tipo_seguro" name="tipo_seguro" required>
+                    <option value="">Selecciona...</option>
+                    <option value="hogar">🏠 Seguro de Hogar</option>
+                    <option value="auto">🚗 Seguro de Coche</option>
+                    <option value="vida">💚 Seguro de Vida</option>
+                    <option value="decesos">🕊️ Seguro de Decesos</option>
+                    <option value="salud">🏥 Seguro de Salud</option>
+                    <option value="mascotas">🐾 Seguro de Mascotas</option>
+                    <option value="otro">📋 Otro / Consulta General</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje (opcional)</label>
+                <textarea id="mensaje" name="mensaje" rows="4"
+                    placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
+            </div>
+
+            <div class="form-group checkbox">
+                <input type="checkbox" id="privacidad" name="privacidad" required>
+                <label for="privacidad">
+                    He leído y acepto la <a href="/politica-privacidad" target="_blank">política de privacidad</a> *
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+                Solicitar Presupuesto Gratis
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Zonas de Servicio -->
+<section class="zones">
+    <div class="container">
+        <h2 class="section-title">Zonas de Servicio</h2>
+        <p class="section-subtitle">Tu agente de seguros local en Madrid y Sierra de Madrid</p>
+
+        <div class="zones-list">
+            <span class="zone-tag">Madrid</span>
+            <span class="zone-tag">Las Rozas</span>
+            <span class="zone-tag">Majadahonda</span>
+            <span class="zone-tag">Los Molinos</span>
+            <span class="zone-tag">Collado Villalba</span>
+            <span class="zone-tag">Torrelodones</span>
+            <span class="zone-tag">Galapagar</span>
+            <span class="zone-tag">Guadarrama</span>
+            <span class="zone-tag">Cercedilla</span>
+            <span class="zone-tag">Alpedrete</span>
+            <span class="zone-tag">Pozuelo</span>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+    // Manejar envío del formulario
+    document.getElementById('contact-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const formData = {
+            nombre: document.getElementById('nombre').value,
+            email: document.getElementById('email').value,
+            telefono: document.getElementById('telefono').value,
+            tipo_seguro: document.getElementById('tipo_seguro').value,
+            mensaje: document.getElementById('mensaje').value,
+            acepta_privacidad: document.getElementById('privacidad').checked
+        };
+
+        try {
+            const response = await fetch('/api/leads/contacto', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Mostrar mensaje de éxito
+                alert('🎉 ¡Gracias! Hemos recibido tu solicitud. Te contactaremos pronto.');
+                this.reset();
+
+                // Confetti! (si existe la librería)
+                if (typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 }
+                    });
+                }
+            } else {
+                alert('Error: ' + (data.detail || 'Ha ocurrido un error'));
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error al enviar el formulario. Inténtalo de nuevo.');
+        }
+    });
+</script>
+{% endblock %}

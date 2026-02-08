@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="comparador-page">
+    <div class="container">
+        <h1>Comparador de Seguros</h1>
+        <p class="subtitle">Compara más de 20 aseguradoras y encuentra el mejor precio</p>
+
+        <!-- Formulario multi-paso del comparador -->
+        <div class="comparador-form-container">
+            <form id="comparador-form" class="comparador-form">
+                <!-- Paso 1: Tipo de seguro -->
+                <div class="step" data-step="1">
+                    <h2>¿Qué tipo de seguro necesitas?</h2>
+
+                    <div class="insurance-types">
+                        <label class="insurance-type">
+                            <input type="radio" name="tipo_seguro" value="hogar" required>
+                            <span class="insurance-card">
+                                <span class="icon">🏠</span>
+                                <span class="name">Hogar</span>
+                            </span>
+                        </label>
+
+                        <label class="insurance-type">
+                            <input type="radio" name="tipo_seguro" value="auto">
+                            <span class="insurance-card">
+                                <span class="icon">🚗</span>
+                                <span class="name">Coche</span>
+                            </span>
+                        </label>
+
+                        <label class="insurance-type">
+                            <input type="radio" name="tipo_seguro" value="vida">
+                            <span class="insurance-card">
+                                <span class="icon">💚</span>
+                                <span class="name">Vida</span>
+                            </span>
+                        </label>
+
+                        <label class="insurance-type">
+                            <input type="radio" name="tipo_seguro" value="decesos">
+                            <span class="insurance-card">
+                                <span class="icon">🕊️</span>
+                                <span class="name">Decesos</span>
+                            </span>
+                        </label>
+
+                        <label class="insurance-type">
+                            <input type="radio" name="tipo_seguro" value="salud">
+                            <span class="insurance-card">
+                                <span class="icon">🏥</span>
+                                <span class="name">Salud</span>
+                            </span>
+                        </label>
+
+                        <label class="insurance-type">
+                            <input type="radio" name="tipo_seguro" value="mascotas">
+                            <span class="insurance-card">
+                                <span class="icon">🐾</span>
+                                <span class="name">Mascotas</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="nextStep()">
+                        Continuar →
+                    </button>
+                </div>
+
+                <!-- Paso 2: Datos personales -->
+                <div class="step" data-step="2" style="display: none;">
+                    <h2>Tus datos de contacto</h2>
+
+                    <div class="form-group">
+                        <label for="comp_nombre">Nombre completo *</label>
+                        <input type="text" id="comp_nombre" name="nombre" required minlength="2">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="comp_email">Email *</label>
+                            <input type="email" id="comp_email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comp_telefono">Teléfono *</label>
+                            <input type="tel" id="comp_telefono" name="telefono" required minlength="9">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp_cp">Código Postal</label>
+                        <input type="text" id="comp_cp" name="codigo_postal" maxlength="5">
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-outline" onclick="prevStep()">
+                            ← Volver
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">
+                            Continuar →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Paso 3: Confirmación -->
+                <div class="step" data-step="3" style="display: none;">
+                    <h2>¡Casi listo!</h2>
+
+                    <div class="summary-box">
+                        <p>✅ Un asesor te contactará en <strong>menos de 24 horas</strong></p>
+                        <p>✅ Recibirás una <strong>comparativa personalizada</strong></p>
+                        <p>✅ Sin compromiso y <strong>100% gratuito</strong></p>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="comp_privacidad" name="acepta_privacidad" required>
+                        <label for="comp_privacidad">
+                            Acepto la <a href="/politica-privacidad" target="_blank">política de privacidad</a> *
+                        </label>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-outline" onclick="prevStep()">
+                            ← Volver
+                        </button>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            🚀 Solicitar Comparativa Gratis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Paso 4: Éxito -->
+                <div class="step step-success" data-step="4" style="display: none;">
+                    <div class="success-icon">🎉</div>
+                    <h2>¡Solicitud Recibida!</h2>
+                    <p>Gracias por confiar en Candi Seguros.</p>
+                    <p>Un asesor te contactará en <strong>menos de 24 horas</strong> con tu comparativa personalizada.
+                    </p>
+
+                    <div class="success-contact">
+                        <p>¿Tienes prisa? Llámanos:</p>
+                        <a href="tel:+34661854126" class="btn btn-primary btn-lg">
+                            📞 661 854 126
+                        </a>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Indicador de pasos -->
+            <div class="step-indicator">
+                <div class="step-dot active" data-step="1">1</div>
+                <div class="step-line"></div>
+                <div class="step-dot" data-step="2">2</div>
+                <div class="step-line"></div>
+                <div class="step-dot" data-step="3">3</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+    let currentStep = 1;
+    const totalSteps = 3;
+
+    function showStep(step) {
+        document.querySelectorAll('.step').forEach(el => el.style.display = 'none');
+        document.querySelector(`.step[data-step="${step}"]`).style.display = 'block';
+
+        // Actualizar indicador
+        document.querySelectorAll('.step-dot').forEach(dot => {
+            const dotStep = parseInt(dot.dataset.step);
+            dot.classList.remove('active', 'completed');
+            if (dotStep < step) dot.classList.add('completed');
+            if (dotStep === step) dot.classList.add('active');
+        });
+    }
+
+    function nextStep() {
+        if (currentStep === 1) {
+            // Validar que se seleccionó un tipo
+            const tipo = document.querySelector('input[name="tipo_seguro"]:checked');
+            if (!tipo) {
+                alert('Por favor, selecciona un tipo de seguro');
+                return;
+            }
+        }
+
+        if (currentStep === 2) {
+            // Validar campos
+            const nombre = document.getElementById('comp_nombre').value;
+            const email = document.getElementById('comp_email').value;
+            const telefono = document.getElementById('comp_telefono').value;
+
+            if (!nombre || nombre.length < 2) {
+                alert('Por favor, introduce tu nombre');
+                return;
+            }
+            if (!email || !email.includes('@')) {
+                alert('Por favor, introduce un email válido');
+                return;
+            }
+            if (!telefono || telefono.length < 9) {
+                alert('Por favor, introduce un teléfono válido');
+                return;
+            }
+        }
+
+        if (currentStep < totalSteps) {
+            currentStep++;
+            showStep(currentStep);
+        }
+    }
+
+    function prevStep() {
+        if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    }
+
+    // Envío del formulario
+    document.getElementById('comparador-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const formData = {
+            tipo_seguro: document.querySelector('input[name="tipo_seguro"]:checked').value,
+            nombre: document.getElementById('comp_nombre').value,
+            email: document.getElementById('comp_email').value,
+            telefono: document.getElementById('comp_telefono').value,
+            codigo_postal: document.getElementById('comp_cp').value,
+            acepta_privacidad: document.getElementById('comp_privacidad').checked
+        };
+
+        try {
+            const response = await fetch('/api/leads/comparador', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Mostrar paso de éxito
+                currentStep = 4;
+                showStep(4);
+
+                // Ocultar indicador
+                document.querySelector('.step-indicator').style.display = 'none';
+            } else {
+                alert('Error: ' + (data.detail || 'Ha ocurrido un error'));
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error al enviar. Inténtalo de nuevo.');
+        }
+    });
+</script>
+{% endblock %}

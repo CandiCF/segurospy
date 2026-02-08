@@ -1,0 +1,35 @@
+# SegurosPy - Dependencias Python
+# Framework web
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+
+# Templates HTML
+jinja2==3.1.4
+
+# Base de datos
+sqlalchemy==2.0.35
+aiosqlite==0.20.0
+
+# Validación de datos
+pydantic==2.9.0
+pydantic-settings==2.5.0
+python-multipart==0.0.12
+email-validator==2.2.0
+
+# Envío de emails
+aiosmtplib==3.0.2
+
+# Variables de entorno
+python-dotenv==1.0.1
+
+# HTTP requests (para webhooks, APIs externas)
+httpx==0.27.2
+
+# Tareas programadas (alternativa a n8n)
+apscheduler==3.10.4
+
+# IA / OpenAI
+openai==1.51.0
+
+# Utilidades
+python-dateutil==2.9.0
